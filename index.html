@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1 Month Challenge</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1e1e2f;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+.dashboard {
+      padding: 20px;
+      text-align: center;
+      background-color: #2a2a40;
+    }
+    .dashboard h1 {
+      margin-bottom: 20px;
+    }
+    .dashboard table {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+    .dashboard th, .dashboard td {
+      padding: 10px;
+      border: 1px solid #444;
+    }
+    .dashboard th {
+      background-color: #6a5acd;
+      color: #fff;
+    }
+    .dashboard td {
+      background-color: #3a3a5a;
+    }
+    .sort-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    .sort-buttons button {
+      padding: 10px 20px;
+      background-color: #6a5acd;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .sort-buttons button:hover {
+      background-color: #7b68ee;
+    }
+    .graph-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+    footer {
+      padding: 40px 20px; 
+      text-align: center;
+      
+      margin-top: 40px; 
+    }
+    .graph-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <h1>1-Month Challenge Dashboard</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Total Earnings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🥇 Top 1</td>
+          <td>VOID</td>
+          <td>$0</td>
+        </tr>
+        <tr>
+          <td>🥈 Top 2</td>
+          <td>MGD</td>
+          <td>$0</td>
+        </tr>
+        <tr>
+          <td>🥉 Top 3</td>
+          <td>VEX</td>
+          <td>$0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sort-buttons">
+    <button onclick="showGraph('week1')">Week 1</button>
+    <button onclick="showGraph('week2')">Week 2</button>
+    <button onclick="showGraph('week3')">Week 3</button>
+    <button onclick="showGraph('week4')">Week 4</button>
+  </div>
+
+  <div class="graph-section">
+    <img id="graph-image" src="graph_competitors_week1.png" alt="lax dakhl l weeks lokhrin m3a krk o hna yalah bdina LOL">
+  </div>
+  <footer>
+  </footer>
+  <script>
+    function showGraph(week) {
+      const graphImage = document.getElementById('graph-image');
+      graphImage.src = `graph_competitors_${week}.png`;
+    }
+  </script>
+</body>
+</html>
